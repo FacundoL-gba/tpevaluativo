@@ -1,0 +1,39 @@
+<div class="container">
+    <header class="text-center py-5 mb-4">
+        <div class="container">
+          <h1 class="title">Reliza tu compra y la recibes en la puerta de tu domicilio</h1>
+        </div>
+    </header>
+	<div class="row-fluid">
+        <div class="col-md-7">
+            <div class="span8">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.464486286312!2d-68.13929828489528!3d-38.959060708209826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a3336aa90df5f%3A0x4127650bf58575f0!2sJuan%20Juli%C3%A1n%20Lastra%205600%2C%20Q8300JTJ%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v1650736939377!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="col-md-5">
+           <!-- form -->
+            <form id="formulario-m" novalidate (ngSubmit)="submit()" #f="ngForm" [formGroup]="form">
+                <!-- campos -->
+                <fieldset>
+                    <h2 class="fs-title">Ingresa tus datos</h2>
+                    <input type="text" placeholder="Nombre y apellido" class="form-control" formControlName="nombre" ngModel
+                    required/>
+                    <input placeholder="Email" class="form-control" formControlName="email"
+                    type="email" ngModel required>
+                    <input placeholder="Número telefónico" class="form-control" formControlName="number"
+                    type="number" ngModel required minlength="8 caracteres"/>
+                    <input type="text" name="domicilio" placeholder="Ingrese domicilio" />
+                    <h3 class="fs-subtitle">Información adicional</h3>
+                    <textarea  placeholder="comentario" class="form-control"
+                    name="comentario" ngModel>></textarea>
+                    <input id="submit" mat-raised-button type="submit" color="primary" class="next action-button"
+                    [disabled]="f.invalid" value="Enviar" />
+                </fieldset>
+                <strong>{{f.value.firstname}} </strong>
+                <strong>{{f.value.lastname}} </strong>
+                <strong>{{f.value.email}} </strong>
+                <strong>{{f.value.message}} </strong>
+            </form>  
+        </div>
+    </div>
+</div>
