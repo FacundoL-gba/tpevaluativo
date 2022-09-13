@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     this.loading = true;
     this.afAuth.signInWithEmailAndPassword(email, password).then((user) => {
       if(user.user?.emailVerified) {
-        this.router.navigate(['/cursos']);
+        this.router.navigate(['/home']);
       } else {
         this.router.navigate(['/verificar-correo']);
       }

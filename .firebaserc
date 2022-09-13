@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tp-evaluativo-52d2b": {
+      "hosting": {
+        "tpevaluativo": [
+          "tp-evaluativo-52d2b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tp-evaluativo-52d2b"
+  }
+}

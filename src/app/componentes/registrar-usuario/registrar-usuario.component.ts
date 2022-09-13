@@ -55,7 +55,7 @@ export class RegistrarUsuarioComponent implements OnInit {
     this.afAuth.currentUser.then(user => user?.sendEmailVerification()
       .then(() => {
         alert('Le enviamos un correo para verificar su email');
-        alert(['/login']);
+        this.router.navigate(['/login']);
       })
     );
   } 

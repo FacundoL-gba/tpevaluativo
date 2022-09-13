@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "tpevaluativo:build:production",
+            "firebaseProject": "tp-evaluativo-52d2b",
+            "firebaseHostingSite": "tp-evaluativo-52d2b"
+          }
         }
       }
     }

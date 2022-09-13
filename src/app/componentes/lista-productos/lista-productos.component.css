@@ -5,3 +5,11 @@
 .btn {
     float: right;
 }
+.pi-pencil {
+    color: rgb(2, 245, 233);
+    cursor: pointer;
+}
+.pi-trash {
+    color: red;
+    cursor: pointer;
+}
